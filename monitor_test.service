@@ -4,7 +4,6 @@ After=network.target
 
 [Service]
 ExecStart=/usr/local/bin/monitor_test.sh
-Restart=always  #в данном случае не нужен
 RestartSec=10
 User=root
 
