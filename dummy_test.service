@@ -1,0 +1,9 @@
+[Unit]
+Description=Dummy process "test"
+After=network.target
+
+[Service]
+ExecStart=/bin/bash -c 'exec -a test sleep 1000'
+Restart=always
+RestartSec=5
+User=root

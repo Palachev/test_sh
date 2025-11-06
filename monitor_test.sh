@@ -7,7 +7,7 @@ MONITOR_URL="https://test.com/monitoring/test/api"
 
 touch "$LOG_FILE"
 
-CURRENT_PID=$(pgrep -x "$PROCESS_NAME")
+CURRENT_PID=$(pgrep -x "$PROCESS_NAME") #CURRENT_PID=$(systemctl show -p MainPID dummy_test.service | cut -d= -f2) если мы запускаем через docker
 
 if [ -n "$CURRENT_PID" ]; then 
     if [ -f "$PID_FILE" ]; then
