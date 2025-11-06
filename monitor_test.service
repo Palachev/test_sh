@@ -1,0 +1,12 @@
+[Unit]
+Description=Monitoring script for process "test"
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/monitor_test.sh
+Restart=always
+RestartSec=10
+User=root
+
+[Install]
+WantedBy=multi-user.target
