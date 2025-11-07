@@ -50,4 +50,15 @@ cat /var/log/monitoring.log
 ```bash
 systemctl status monitor_test_timer.service
 ```
+Так же добавил файл `/etc/logrotate.d/monitor_test.conf` - со следующими настройками:
+- Проверка и ротация раз в день
+- Хранить 3 старых лог-файла
+- Ротация произойдёт, если лог превысит 10 МБ
+- Старые логи архивируются (compress)
+- Сжатие задержано на следующую ротацию (delaycompress)
 
+## Установка и настройка logrotate
+```bash
+sudo apt install logrotate
+sudo cp monitor_test.conf /etc/logrotate.d/
+```
