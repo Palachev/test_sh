@@ -43,7 +43,7 @@ systemctl start monitor_test_timer.service
 
 Смотрим логи:
 ```bash
-tail -f /var/log/monitoring.log
+cat /var/log/monitoring.log
 ```
 
 Проверяем статус:
