@@ -30,6 +30,7 @@ chmod +x /usr/local/bin/monitor_test.sh
 ```bash
 cp monitor_test.service /etc/systemd/system/
 cp monitor_test_timer.service /etc/systemd/system/
+cp dummy_test.service /etc/systemd/system
 ```
 
 3. Запускаем:
